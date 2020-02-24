@@ -14,9 +14,13 @@ public class AppTest {
         //App classUnderTest = new App();
         ToDoList myList = new ToDoList();
 
-        myList.add(new ToDoEntry("buy groceries"));
-        assertEquals("buy groceries", myList.getLastItem().toString());
+        String entry = "buy groceries";
+
+        myList.add(new ToDoEntry(entry));
+        assertEquals(entry, myList.getLastItem().toString());
     }
+
+
 
 
 
