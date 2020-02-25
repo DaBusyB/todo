@@ -27,21 +27,22 @@ public class AppTest {
         // given
         ToDoList myList = new ToDoList();
 
+
         String entry = "buy food for Loki";
-        myList.add(new ToDoEntry(entry));
+        myList.add(new ToDoEntry(entry)); // add item to the list
 
         int entryIndex = 0; //index i want deleted
 
         /*
         I had this type as String, editor suggested type ToDoEntry. Why?
         */
-        ToDoEntry entryToDelete = myList.getEntry(entryIndex); //value of that index
+        ToDoEntry entryToDelete = myList.getEntry(entryIndex); // value of that index
 
         // when
-        myList.remove(entryToDelete);
+        myList.remove(entryToDelete); // deletes that value
 
         // then
-        assertEquals(false, myList.findEntry(entryToDelete));
+        assertEquals(false, myList.searchForEntry(entryToDelete)); // false indicates that value is no longer contained in list
     }
 
 

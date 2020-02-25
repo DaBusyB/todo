@@ -26,7 +26,7 @@ public class ToDoList {
         return itemsList.get(index);
     }
 
-    public boolean findEntry(ToDoEntry entryItem) /* why is this type ToDoEntry? */
+    public boolean searchForEntry(ToDoEntry entryItem) /* why is this type ToDoEntry? */
     {
         boolean ans = itemsList.contains(entryItem);
         return ans;
