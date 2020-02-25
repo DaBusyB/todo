@@ -20,7 +20,21 @@ public class AppTest {
         assertEquals(entry, myList.getLastItem().toString());
     }
 
+    //delete list entry
+    @Test
+    public void testDeleteEntry()
+    {
+        // given
+        ToDoList myList = new ToDoList();
+        int entryIndexToDel = 0; //index i want deleted
+        String valOfEntryIndexToDel = myList.get(entryIndexToDel); //value of that index
 
+        // when
+        myList.remove(entryIndexToDel); //remove is ArrayList method
+
+        // then
+        assertEquals(false, myList.contains(valOfEntryIndexToDel));
+    }
 
 
 
