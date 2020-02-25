@@ -26,8 +26,12 @@ public class AppTest {
     {
         // given
         ToDoList myList = new ToDoList();
-        int entryIndex = 0 //index i want deleted
-        String entryToDelete = myList.getEntry(entryIndex); //value of that index
+
+        String entry = "buy food for Loki";
+        myList.add(new ToDoEntry(entry));
+
+        int entryIndex = 0; //index i want deleted
+        ToDoEntry entryToDelete = myList.getEntry(entryIndex); //value of that index
 
         // when
         myList.remove(entryToDelete);

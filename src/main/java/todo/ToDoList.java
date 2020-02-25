@@ -2,8 +2,6 @@ package todo;
 
 import java.util.ArrayList;
 
-import todo.ToDoEntry;
-
 public class ToDoList {
 
     public ArrayList<ToDoEntry> itemsList = new ArrayList<ToDoEntry>();
@@ -18,7 +16,7 @@ public class ToDoList {
         return itemsList.get(itemsList.size() - 1);
     }
 
-    public void remove(int index)
+    public void remove(ToDoEntry index)
     {
         itemsList.remove(index);
     }
@@ -26,6 +24,12 @@ public class ToDoList {
     public ToDoEntry getEntry(int index)
     {
         return itemsList.get(index);
+    }
+
+    public boolean findEntry(ToDoEntry entryItem)
+    {
+        boolean ans = itemsList.contains(entryItem);
+        return ans;
     }
 
 
