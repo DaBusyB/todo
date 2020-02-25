@@ -23,7 +23,10 @@ public class ToDoList {
         itemsList.remove(index);
     }
 
-
+    public ToDoEntry getEntry(int index)
+    {
+        return itemsList.get(index);
+    }
 
 
 
