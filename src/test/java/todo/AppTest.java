@@ -26,14 +26,14 @@ public class AppTest {
     {
         // given
         ToDoList myList = new ToDoList();
-        int entryIndexToDel = 0; //index i want deleted
-        String valOfEntryIndexToDel = myList.get(entryIndexToDel); //value of that index
+        int entryIndex = myList.getEntryIndex(); //index i want deleted
+        String valOfEntryIndex = myList.get(entryIndex); //value of that index
 
         // when
-        myList.remove(entryIndexToDel); //remove is ArrayList method
+        myList.remove(myList[entryIndex]);
 
         // then
-        assertEquals(false, myList.contains(valOfEntryIndexToDel));
+        assertEquals(false, myList.contains(valOfEntryIndex));
     }
 
 
