@@ -31,6 +31,10 @@ public class AppTest {
         myList.add(new ToDoEntry(entry));
 
         int entryIndex = 0; //index i want deleted
+
+        /*
+        I had this type as String, editor suggested type ToDoEntry. Why?
+        */
         ToDoEntry entryToDelete = myList.getEntry(entryIndex); //value of that index
 
         // when
