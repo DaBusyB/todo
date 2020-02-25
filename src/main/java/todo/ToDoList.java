@@ -18,6 +18,10 @@ public class ToDoList {
         return itemsList.get(itemsList.size() - 1);
     }
 
+    public void remove(int index)
+    {
+        itemsList.remove(index);
+    }
 
 
 }
