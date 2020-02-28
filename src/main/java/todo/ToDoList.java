@@ -26,26 +26,35 @@ public class ToDoList {
         return itemsList.get(itemsList.size() - 1);
     }
 
+
     //search
-    public boolean searchForEntry(ToDoEntry entryItem) /* why is this type ToDoEntry? */
+    public boolean searchForEntry(ToDoEntry entryItem)
     {
         boolean entry = itemsList.contains(entryItem);
         return entry;
     }
 
+
     //add, delete by index, update
     public void add(ToDoEntry entry)
     {
-
         itemsList.add(entry);
-        displayAllEntries();
+        //displayAllEntries();
     }
 
-    public void remove(ToDoEntry index) /* why is this type ToDoEntry? */
+    public void remove(ToDoEntry index)
     {
         itemsList.remove(index);
         //displayList()
     }
+
+    public ToDoEntry update(int index, ToDoEntry newEntry)
+    {
+        return itemsList.set(index, newEntry);
+        //displayAllEntries();
+    }
+
+
 
 
 

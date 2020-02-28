@@ -49,22 +49,25 @@ public class AppTest {
     }
 
 
-//    @Test
-//    public void testUpdateExistingEntry()
-//    {
-//        //given
-//        ToDoList myList = new ToDoList();
-//
-//        String entry = "buy food for Loki";
-//        myList.add(new ToDoEntry(entry)); // add item to the list
-//
-//        //when
-//        String newEntry = "buy food for Pickles";
-//        String oldEntry = myList.update(0, newEntry);
-//
-//        //then
-//        assertEquals();
-//    }
+    @Test
+    public void testUpdateExistingEntry()
+    {
+        //given
+        ToDoList myList = new ToDoList();
+
+        String entry = "buy food for Loki";
+        myList.add(new ToDoEntry(entry)); // add item to the list
+
+        //when
+        String newEntry = "buy food for Pickles";
+        ToDoEntry replacedEntry = myList.update(0, new ToDoEntry(newEntry)); //returns oldEntry that's getting replaced
+
+        //then
+        assertEquals(entry, replacedEntry.toString()); //ensure that entry and replacedEntry are the same (should be the entry that gets changed)
+        assertNotEquals(myList.getEntry(0), newEntry);
+
+        myList.displayAllEntries(); //confirm newEntry replaced entry
+    }
 
 //    //undo deletion of list entry
 //    @Test
