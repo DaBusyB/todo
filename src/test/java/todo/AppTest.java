@@ -7,17 +7,18 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-    
+
+    //add list entry
     @Test 
     public void testAddToDoEntry()
     {
         //App classUnderTest = new App();
         ToDoList myList = new ToDoList();
 
-        String entry = "buy groceries";
+        String entry = "buy groceries!";
 
         myList.add(new ToDoEntry(entry));
-        assertEquals(entry, myList.getLastItem().toString());
+        assertEquals(entry, myList.getLastEntry().toString());
     }
 
     //delete list entry
@@ -31,6 +32,7 @@ public class AppTest {
         String entry = "buy food for Loki";
         myList.add(new ToDoEntry(entry)); // add item to the list
 
+
         int entryIndex = 0; //index i want deleted
 
         /*
@@ -43,8 +45,23 @@ public class AppTest {
 
         // then
         assertEquals(false, myList.searchForEntry(entryToDelete)); // false indicates that value is no longer contained in list
+
     }
 
+//    //change list entry
+//    @Test
+//    public void testChangeEntry()
+//    {}
+
+//    //undo deletion of list entry
+//    @Test
+//    public void testUndoDeleteEntry()
+//    {}
+
+//    //mark entry as completed
+//    @Test
+//    public void testUndoDeleteEntry()
+//    {}
 
 
 }
