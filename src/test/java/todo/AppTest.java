@@ -44,14 +44,27 @@ public class AppTest {
         myList.remove(entryToDelete); // deletes that value
 
         // then
-        assertEquals(false, myList.searchForEntry(entryToDelete)); // false indicates that value is no longer contained in list
+        assertFalse(myList.searchForEntry(entryToDelete)); // false indicates that value is no longer contained in list
 
     }
 
-//    //change list entry
+
 //    @Test
-//    public void testChangeEntry()
-//    {}
+//    public void testUpdateExistingEntry()
+//    {
+//        //given
+//        ToDoList myList = new ToDoList();
+//
+//        String entry = "buy food for Loki";
+//        myList.add(new ToDoEntry(entry)); // add item to the list
+//
+//        //when
+//        String newEntry = "buy food for Pickles";
+//        String oldEntry = myList.update(0, newEntry);
+//
+//        //then
+//        assertEquals();
+//    }
 
 //    //undo deletion of list entry
 //    @Test
@@ -59,6 +72,11 @@ public class AppTest {
 //    {}
 
 //    //mark entry as completed
+//    @Test
+//    public void testUndoDeleteEntry()
+//    {}
+
+//    //scrap entire list
 //    @Test
 //    public void testUndoDeleteEntry()
 //    {}
