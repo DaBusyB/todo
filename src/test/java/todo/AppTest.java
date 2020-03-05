@@ -39,7 +39,7 @@ public class AppTest {
         /*
         I had this type as String, editor suggested type ToDoEntry. Why?
         */
-        ToDoEntry entryToDelete = myList.getEntry(entryIndex); // value of that index
+        ToDoEntry entryToDelete = myList.getEntryByIndex(entryIndex); // value of that index
 
         // when
         myList.remove(entryToDelete); // deletes that value
@@ -70,31 +70,21 @@ public class AppTest {
         myList.displayAllEntries(); //confirm newEntry replaced entry
     }
 
-
-
-//    //mark entry as completed
-//    @Test
-//    public void testUndoDeleteEntry()
-//    {}
     @Test
-    public void testCheckOffCompletedEntry()
-    {
+    public void testCheckOffCompletedEntry() {
         //given
         ToDoList myList = new ToDoList();
-
-        String entry = "get pickles spayed";
-        myList.add(new ToDoEntry(entry));
+        String entry = "Get Pickles spayed";
 
         //when
-        String newEntry = "[√]" + " " + entry;
-        int indexOfEntry = myList.getEntryIndex(entry);
-
-        //ToDoEntry completedEntry = myList.update(indexOfEntry, new ToDoEntry(newEntry)); //returns unchecked entry
-
-        System.out.println(entry);
-        myList.displayAllEntries();
+        if (myList.checkOffCompletedEntry())
+        {
+            entry = "[√] " + entry;
+        }
 
         //then
+        myList.add(new ToDoEntry(entry));
+        assertTrue("Item is not completed!", entry.contains("[√]"));
 
     }
 
