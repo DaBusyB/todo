@@ -10,11 +10,11 @@ public class ToDoList {
     {
         for (int i = 0; i < itemsList.size(); i++)
         {
-            System.out.println(i + " " + getEntry(i).toString());
+            System.out.println(i + " " + getEntryByIndex(i).toString());
         }
     }
 
-    public ToDoEntry getEntry(int index)
+    public ToDoEntry getEntryByIndex(int index)
     {
         //indexOf
         return itemsList.get(index);
@@ -24,6 +24,12 @@ public class ToDoList {
     {
 
         return itemsList.get(itemsList.size() - 1);
+    }
+
+    public int getEntryIndex(String entry)
+    {
+        //System.out.print(itemsList.indexOf(entry));
+        return itemsList.indexOf(entry);
     }
 
 
@@ -53,6 +59,8 @@ public class ToDoList {
         return itemsList.set(index, newEntry);
         //displayAllEntries();
     }
+
+
 
 
 

@@ -6,6 +6,7 @@ package todo;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+
 public class AppTest {
 
     //add list entry
@@ -64,22 +65,46 @@ public class AppTest {
 
         //then
         assertEquals(entry, replacedEntry.toString()); //ensure that entry and replacedEntry are the same (should be the entry that gets changed)
-        assertNotEquals(myList.getEntry(0), newEntry);
+        assertNotEquals(myList.getEntryByIndex(0), newEntry);
 
         myList.displayAllEntries(); //confirm newEntry replaced entry
     }
 
-//    //undo deletion of list entry
-//    @Test
-//    public void testUndoDeleteEntry()
-//    {}
+
 
 //    //mark entry as completed
 //    @Test
 //    public void testUndoDeleteEntry()
 //    {}
+    @Test
+    public void testCheckOffCompletedEntry()
+    {
+        //given
+        ToDoList myList = new ToDoList();
+
+        String entry = "get pickles spayed";
+        myList.add(new ToDoEntry(entry));
+
+        //when
+        String newEntry = "[√]" + " " + entry;
+        int indexOfEntry = myList.getEntryIndex(entry);
+
+        //ToDoEntry completedEntry = myList.update(indexOfEntry, new ToDoEntry(newEntry)); //returns unchecked entry
+
+        System.out.println(entry);
+        myList.displayAllEntries();
+
+        //then
+
+    }
+
 
 //    //scrap entire list
+//    @Test
+//    public void testUndoDeleteEntry()
+//    {}
+
+    //    //undo deletion of list entry
 //    @Test
 //    public void testUndoDeleteEntry()
 //    {}
