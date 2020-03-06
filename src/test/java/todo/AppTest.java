@@ -77,14 +77,13 @@ public class AppTest {
         String entry = "Get Pickles spayed";
 
         //when
-        if (myList.checkOffCompletedEntry())
-        {
-            entry = "[√] " + entry;
-        }
+        String checkedEntry = myList.checkOffCompletedEntry(entry);
+        myList.add(new ToDoEntry(checkedEntry));
+
+        myList.displayAllEntries();
 
         //then
-        myList.add(new ToDoEntry(entry));
-        assertTrue("Item is not completed!", entry.contains("[√]"));
+        assertTrue("Item is not completed!", checkedEntry.contains("[√]"));
 
     }
 

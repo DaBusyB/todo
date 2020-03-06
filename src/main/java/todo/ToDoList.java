@@ -62,9 +62,16 @@ public class ToDoList {
         //displayAllEntries();
     }
 
-    public boolean checkOffCompletedEntry()
+    public String checkOffCompletedEntry(String entry)
     {
-          return completedEntry = true;
+        completedEntry = true;
+        String checkedEntry = "";
+
+        if (completedEntry)
+        {
+            checkedEntry = "[√] " + entry;
+        }
+        return checkedEntry;
     }
 
 
