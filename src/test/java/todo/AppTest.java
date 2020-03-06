@@ -80,8 +80,6 @@ public class AppTest {
         String checkedEntry = myList.checkOffCompletedEntry(entry);
         myList.add(new ToDoEntry(checkedEntry));
 
-        myList.displayAllEntries();
-
         //then
         assertTrue("Item is not completed!", checkedEntry.contains("[√]"));
 

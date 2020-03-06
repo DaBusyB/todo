@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class ToDoList {
     public ArrayList<ToDoEntry> itemsList = new ArrayList<ToDoEntry>();
-    boolean completedEntry;
-    boolean containsCheck;
 
     //display options
     public void displayAllEntries()
@@ -34,7 +32,6 @@ public class ToDoList {
         return itemsList.indexOf(entry);
     }
 
-
     //search
     public boolean searchForEntry(ToDoEntry entryItem)
     {
@@ -42,8 +39,7 @@ public class ToDoList {
         return entry;
     }
 
-
-    //add, delete by index, update
+    //add, delete by index, update, check off
     public void add(ToDoEntry entry)
     {
         itemsList.add(entry);
@@ -64,7 +60,7 @@ public class ToDoList {
 
     public String checkOffCompletedEntry(String entry)
     {
-        completedEntry = true;
+        boolean completedEntry = true;
         String checkedEntry = "";
 
         if (completedEntry)
