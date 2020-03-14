@@ -88,13 +88,16 @@ public class AppTest {
 
 //    //scrap entire list
 //    @Test
-//    public void testUndoDeleteEntry()
+//    public void ()
 //    {}
 
-    //    //undo deletion of list entry
+//    //undo deletion of list entry
 //    @Test
-//    public void testUndoDeleteEntry()
+//    public void ()
 //    {}
 
-
+//    //uncheck completed entry
+//    @Test
+//    public void ()
+//    {}
 }

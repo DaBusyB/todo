@@ -46,9 +46,9 @@ public class ToDoList {
         //displayAllEntries();
     }
 
-    public void remove(ToDoEntry index)
+    public void remove(ToDoEntry entryToDelete)
     {
-        itemsList.remove(index);
+        itemsList.remove(entryToDelete);
         //displayList()
     }
 
