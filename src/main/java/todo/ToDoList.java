@@ -22,8 +22,8 @@ public class ToDoList {
 
     public ToDoEntry getLastEntry()
     {
-
-        return itemsList.get(itemsList.size() - 1);
+        ToDoEntry lastEntry = itemsList.get(itemsList.size() - 1);
+        return lastEntry;
     }
 
     public int getIndexOfEntry(String entry)
@@ -46,10 +46,15 @@ public class ToDoList {
         //displayAllEntries();
     }
 
-    public void remove(ToDoEntry entryToDelete)
+    public void remove(ToDoEntry entryToDelete) //remove by entry
     {
         itemsList.remove(entryToDelete);
         //displayList()
+    }
+
+    public void remove(int index) //remove by index
+    {
+
     }
 
     public ToDoEntry update(int index, ToDoEntry newEntry)
