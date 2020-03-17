@@ -29,16 +29,13 @@ public class AppTest {
         // given
         ToDoList myList = new ToDoList();
 
-
         String entry = "buy food for Loki";
         myList.add(new ToDoEntry(entry)); // add item to the list
+        //System.out.print(myList.getIndexOfEntry(myList.getLastEntry().toString()));
+        //int entryIndex = 0;
+        int entryIndex = myList.getIndexOfEntry(myList.getLastEntry().toString());
+        //int entryIndex = myList.getIndexOfEntry(entry); //index i want deleted
 
-
-        int entryIndex = 0; //index i want deleted
-
-        /*
-        I had this type as String, editor suggested type ToDoEntry. Why?
-        */
         ToDoEntry entryToDelete = myList.getEntryByIndex(entryIndex); // value of that index
 
         // when
@@ -46,6 +43,22 @@ public class AppTest {
 
         // then
         assertFalse(myList.searchForEntry(entryToDelete)); // false indicates that value is no longer contained in list
+
+    }
+
+    @Test
+    public void testRemoveEntryByIndex()
+    {
+        //given
+        ToDoList myList = new ToDoList();
+
+        String entry = "find a friend for Pickles";
+        myList.add(new ToDoEntry(entry));
+
+        //when
+
+
+        //then
 
     }
 

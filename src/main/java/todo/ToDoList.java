@@ -28,8 +28,10 @@ public class ToDoList {
 
     public int getIndexOfEntry(String entry)
     {
-        //System.out.print(itemsList.indexOf(entry));
-        return itemsList.indexOf(entry);
+        int entryIndex = itemsList.indexOf(entry);
+        //System.out.print(entryIndex);
+
+        return entryIndex;
     }
 
     //search
@@ -52,7 +54,10 @@ public class ToDoList {
         //displayList()
     }
 
-
+    public void remove(int entryIndexToDelete) //remove by index
+    {
+        itemsList.remove(entryIndexToDelete);
+    }
 
     public ToDoEntry update(int index, ToDoEntry newEntry)
     {
