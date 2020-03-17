@@ -11,7 +11,7 @@ public class AppTest {
 
     //add list entry
     @Test 
-    public void testAddToDoEntry()
+    public void testAddEntry()
     {
         //App classUnderTest = new App();
         ToDoList myList = new ToDoList();
@@ -24,7 +24,7 @@ public class AppTest {
 
     //delete list entry
     @Test
-    public void testDeleteEntry()
+    public void testRemoveEntry()
     {
         // given
         ToDoList myList = new ToDoList();
@@ -49,9 +49,8 @@ public class AppTest {
 
     }
 
-
     @Test
-    public void testUpdateExistingEntry()
+    public void testUpdateEntry()
     {
         //given
         ToDoList myList = new ToDoList();
@@ -71,7 +70,7 @@ public class AppTest {
     }
 
     @Test
-    public void testCheckOffCompletedEntry() {
+    public void testCheckOffEntry() {
         //given
         ToDoList myList = new ToDoList();
         String entry = "Get Pickles spayed";

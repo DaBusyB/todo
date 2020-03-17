@@ -52,10 +52,7 @@ public class ToDoList {
         //displayList()
     }
 
-    public void remove(int index) //remove by index
-    {
 
-    }
 
     public ToDoEntry update(int index, ToDoEntry newEntry)
     {
