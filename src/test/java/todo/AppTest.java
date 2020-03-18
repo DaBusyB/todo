@@ -33,7 +33,6 @@ public class AppTest {
         myList.add(new ToDoEntry(entry)); // add item to the list
 
         int entryIndex = myList.getIndexOfEntry(myList.getLastEntry());
-        //System.out.print(myList.getIndexOfEntry(myList.getLastEntry()));
         ToDoEntry entryToDelete = myList.getEntryByIndex(entryIndex); // value of that index
 
         // when
@@ -52,11 +51,14 @@ public class AppTest {
         String entry = "find a friend for Pickles";
         myList.add(new ToDoEntry(entry));
 
-        //when
+        int entryIndex = myList.getIndexOfEntry(myList.getLastEntry());
+        ToDoEntry entryToDelete = myList.getEntryByIndex((entryIndex));
 
+        //when
+        myList.remove(entryIndex);
 
         //then
-
+        assertFalse(myList.searchForEntry(entryToDelete));
     }
 
     @Test
