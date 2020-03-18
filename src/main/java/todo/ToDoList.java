@@ -16,6 +16,7 @@ public class ToDoList {
 
     public ToDoEntry getEntryByIndex(int index)
     {
+
         return itemsList.get(index);
     }
 
@@ -49,7 +50,6 @@ public class ToDoList {
     public void remove(ToDoEntry entryToDelete) //remove by entry
     {
         itemsList.remove(entryToDelete);
-        //displayList()
     }
 
     public void remove(int entryIndexToDelete) //remove by index
