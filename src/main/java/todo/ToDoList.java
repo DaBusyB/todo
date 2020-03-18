@@ -41,10 +41,11 @@ public class ToDoList {
     }
 
     //add, delete by index, update, check off
-    public void add(ToDoEntry entry)
+    public Object add(ToDoEntry entry)
     {
         itemsList.add(entry);
         //displayAllEntries();
+        return null;
     }
 
     public void remove(ToDoEntry entryToDelete) //remove by entry

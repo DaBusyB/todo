@@ -87,31 +87,17 @@ public class AppTest {
         ToDoList myList = new ToDoList();
         String entry = "Get Pickles spayed";
         String newEntry = "[√] " + entry;
-        myList.add(new ToDoEntry(entry));
+        Object oldEntry = myList.add(new ToDoEntry(entry));
+
         int indexOfEntry = myList.getIndexOfEntry(myList.getLastEntry());
+        ToDoEntry entryByIndex = myList.getEntryByIndex(indexOfEntry);
 
         //when
-        ToDoEntry entryByIndex = myList.getEntryByIndex(indexOfEntry);
         myList.update(myList.getIndexOfEntry(entryByIndex), new ToDoEntry(newEntry));
 
         //then
-        //assertTrue("Item is not completed!", myList.getLastEntry().contains("[√]"));
+        assertEquals(newEntry, myList.getLastEntry().toString());
 
     }
 
-
-//    //scrap entire list
-//    @Test
-//    public void ()
-//    {}
-
-//    //undo deletion of list entry
-//    @Test
-//    public void ()
-//    {}
-
-//    //uncheck completed entry
-//    @Test
-//    public void ()
-//    {}
 }
