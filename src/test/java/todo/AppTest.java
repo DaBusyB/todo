@@ -86,18 +86,18 @@ public class AppTest {
         //given
         ToDoList myList = new ToDoList();
         String entry = "Get Pickles spayed";
-        String newEntry = "[√] " + entry;
         Object oldEntry = myList.add(new ToDoEntry(entry));
 
         int indexOfEntry = myList.getIndexOfEntry(myList.getLastEntry());
         ToDoEntry entryByIndex = myList.getEntryByIndex(indexOfEntry);
+
+        String newEntry = "[√] " + entry;
 
         //when
         myList.update(myList.getIndexOfEntry(entryByIndex), new ToDoEntry(newEntry));
 
         //then
         assertEquals(newEntry, myList.getLastEntry().toString());
-
     }
 
 }
