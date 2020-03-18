@@ -22,7 +22,6 @@ public class AppTest {
         assertEquals(entry, myList.getLastEntry().toString());
     }
 
-    //delete list entry
     @Test
     public void testRemoveEntry()
     {
@@ -82,17 +81,21 @@ public class AppTest {
     }
 
     @Test
-    public void testCheckOffEntry() {
+    public void testCheckOffEntry()
+    {
         //given
         ToDoList myList = new ToDoList();
         String entry = "Get Pickles spayed";
+        String newEntry = "[√] " + entry;
+        myList.add(new ToDoEntry(entry));
+        int indexOfEntry = myList.getIndexOfEntry(myList.getLastEntry());
 
         //when
-        String checkedEntry = myList.checkOffCompletedEntry(entry);
-        myList.add(new ToDoEntry(checkedEntry));
+        ToDoEntry entryByIndex = myList.getEntryByIndex(indexOfEntry);
+        myList.update(myList.getIndexOfEntry(entryByIndex), new ToDoEntry(newEntry));
 
         //then
-        assertTrue("Item is not completed!", checkedEntry.contains("[√]"));
+        //assertTrue("Item is not completed!", myList.getLastEntry().contains("[√]"));
 
     }
 

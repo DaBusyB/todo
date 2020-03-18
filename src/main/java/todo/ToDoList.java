@@ -63,7 +63,7 @@ public class ToDoList {
         //displayAllEntries();
     }
 
-    public String checkOffCompletedEntry(String entry)
+    public String checkOffEntry(String entry)
     {
         boolean completedEntry = true;
         String checkedEntry = "";
