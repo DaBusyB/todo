@@ -16,7 +16,6 @@ public class ToDoList {
 
     public ToDoEntry getEntryByIndex(int index)
     {
-        //indexOf
         return itemsList.get(index);
     }
 
@@ -26,11 +25,10 @@ public class ToDoList {
         return lastEntry;
     }
 
-    public int getIndexOfEntry(String entry)
+    public int getIndexOfEntry(ToDoEntry entry)
     {
-        int entryIndex = itemsList.indexOf(entry);
-        //System.out.print(entryIndex);
 
+        int entryIndex = itemsList.indexOf(entry);
         return entryIndex;
     }
 
