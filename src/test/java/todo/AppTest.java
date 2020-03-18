@@ -33,6 +33,8 @@ public class AppTest {
         myList.add(new ToDoEntry(entry)); // add item to the list
         //System.out.print(myList.getIndexOfEntry(myList.getLastEntry()));
         int entryIndex = myList.getIndexOfEntry(myList.getLastEntry());
+
+        System.out.print(myList.getIndexOfEntry(myList.getLastEntry()));
         //int entryIndex = myList.getIndexOfEntry(myList.getLastEntry().toString());
         //int entryIndex = myList.getIndexOfEntry(entry); //index i want deleted
 
