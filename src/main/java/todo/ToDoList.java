@@ -14,6 +14,21 @@ public class ToDoList {
         }
     }
 
+    public int sizeOfList()
+    {
+        int sizeOfList = itemsList.size();
+        //System.out.print(sizeOfList);
+        return sizeOfList;
+    }
+
+    public Object[] listToArray()
+    {
+        Object[] list = itemsList.toArray();
+        return list;
+    }
+
+    //display completed entries
+
     public ToDoEntry getEntryByIndex(int index)
     {
 
@@ -64,24 +79,9 @@ public class ToDoList {
         //displayAllEntries();
     }
 
-    public String checkOffEntry(String entry)
-    {
-        boolean completedEntry = true;
-        String checkedEntry = "";
-
-        if (completedEntry)
-        {
-            checkedEntry = "[√] " + entry;
-        }
-        return checkedEntry;
-    }
-
-
-
-
-
-
-
-
+//    public String displayCheckedEntries()
+//    {
+//
+//    }
 
 }

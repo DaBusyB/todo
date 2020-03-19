@@ -100,4 +100,36 @@ public class AppTest {
         assertEquals(newEntry, myList.getLastEntry().toString());
     }
 
+    @Test
+    public void testDisplayAllEntries()
+    {
+        int counter = 0;
+
+        ToDoList myList = new ToDoList();
+
+        String entry1 = "Buy scratching post for Pickles"; //entry one
+        myList.add(new ToDoEntry(entry1));
+
+        String entry2 = "Buy bone for Loki"; // entry two
+        myList.add(new ToDoEntry(entry2));
+
+        Object[] entries = myList.listToArray(); // turn list to array to count entries. could also try Arraylist.listIterator() along with hasNext() https://bit.ly/2QtdFRk
+        for (Object entry : entries)
+        {
+            counter += 1;
+        }
+
+
+        int sizeOfList = myList.sizeOfList();
+
+        assertEquals(sizeOfList, counter);
+
+    }
+
+//    @Test
+//    public void testDisplayCheckedEntries()
+//    {
+//
+//    }
+
 }
