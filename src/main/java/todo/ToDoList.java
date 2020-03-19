@@ -27,6 +27,12 @@ public class ToDoList {
         return list;
     }
 
+    public String checkOffEntry(String entry)
+    {
+        String newEntry = "√ " + entry;
+        return newEntry;
+    }
+
     //display completed entries
 
     public ToDoEntry getEntryByIndex(int index)

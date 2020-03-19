@@ -91,7 +91,7 @@ public class AppTest {
         int indexOfEntry = myList.getIndexOfEntry(myList.getLastEntry());
         ToDoEntry entryByIndex = myList.getEntryByIndex(indexOfEntry);
 
-        String newEntry = "[√] " + entry;
+        String newEntry = myList.checkOffEntry(entry);
 
         //when
         myList.update(myList.getIndexOfEntry(entryByIndex), new ToDoEntry(newEntry));
